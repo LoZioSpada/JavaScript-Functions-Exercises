@@ -38,16 +38,40 @@ console.log(reverseString("EPICODE"))
  Scrivi una funzione chiamata "upperFirst", che accetta una stringa come parametro e la ritorna rendendo maiuscola ogni lettera iniziale di ogni parola.
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
+function upperFirst (str){
+    let parole = str.split(' ')
+    let array = []
+    for(i = 0; i < parole.length; i++){
+        let primaMaiuscola = parole.toUpperCase()
 
+    }
+    
+}
+console.log(upperFirst('daje roma daje'))
 
 
 /* ESERCIZIO 5
  Scrivi una funzione chiamata "giveMeRandom", che accetta come parametro un numero chiamato n e ritorna un array contenente n numeri random contenuti tra 0 e 10.
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
-function giveMeRandom(){
-
+function giveMeRandom(n){
+    n = [
+        '1',
+        '2',
+        '3',
+        '4',
+        '5',
+        '6',
+        '7',
+        '8',
+        '9',
+        '10',
+    ]
+    const randomIndex = Math.floor(Math.random() * n.length)
+    return n[randomIndex]
 }
+
+console.log(giveMeRandom())
 
 
 //EXTRA:
@@ -55,29 +79,43 @@ function giveMeRandom(){
  Scrivi una funzione chiamata "area" che riceve due parametri (l1, l2) e calcola l'area del rettangolo associato.
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
-function area(){
-
+function area(l1, l2){
+    if(l1 === l2){
+        return (l1*l2 + " è l'area di un QUADRATO, avendo l1 e l2 la stessa lunghezza!!")
+    } 
+    return (l1*l2 + " è l'area di un rettangolo")
+    
 }
-
+console.log(area(4, 5))
 
 /* ESERCIZIO 2
  Scrivi una funzione chiamata "crazyDiff" che calcola la differenza assoluta tra un numero fornito e 19.
  Se il valore calcolato è più grande di 19, la funzione deve tornare tale risultato moltiplicato per 3.
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
-function crazyDiff(){
+function crazyDiff(d, e){
+    e = 19
+    let risultato = d - e;
 
+    if(risultato > 19 || risultato < -19){
+        return (Math.abs(risultato) * 3)
+    }
+    return risultato
 }
-
+console.log(crazyDiff(-10))
 
 /* ESERCIZIO 3
  Scrivi una funzione chiamata "codify" che accetta una stringa come parametro.
  La funzione deve aggiungere la parola "code" all'inizio della stringa fornita e ritornare il risultato, ma se la stringa fornita comincia proprio con "code" allora deve ritornarla senza modifiche.
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
-function codify(){
-
+function codify(string){
+    if(string.startsWith('code')){
+        return string
+    }
+    return 'code' + string
 }
+console.log(codify("ciao"))
 
 
 /* ESERCIZIO 4
@@ -86,15 +124,20 @@ function codify(){
  SUGGERIMENTO: operatore modulo
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
-function check3and7(){
-
+function check3and7(f){
+    if(f % 3 === 0 || f % 7 === 0){
+        return true
+    } else {
+    return false
+    }
 }
-
+console.log(check3and7(50))
 
 /* ESERCIZIO 5
  Scrivi una funzione chiamata "cutString", che accetta una stringa come parametro e la ritorna senza il primo e l'ultimo carattere.
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
-function cutString(){
-    
+function cutString(str){
+    return str.slice(1, str.length - 1)
 }
+console.log(cutString('buonasera'))
