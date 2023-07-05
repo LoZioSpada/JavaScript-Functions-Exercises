@@ -4,7 +4,7 @@
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
 function crazySum(a, b){
-    if(a == b){
+    if(a === b){
         return ((a + b)*3)
     }
     return a + b 
