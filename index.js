@@ -57,23 +57,15 @@ console.log(upperFirst('daje roma daje'))
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
 function giveMeRandom(n){
-    n = [
-        '1',
-        '2',
-        '3',
-        '4',
-        '5',
-        '6',
-        '7',
-        '8',
-        '9',
-        '10',
-    ]
-    const randomIndex = Math.floor(Math.random() * n.length)
-    return n[randomIndex]
+    const numbers = []
+    for (let i = 0; i < n; i++) {
+        const randomIndex = Math.floor(Math.random() * 11)
+        numbers.push(randomIndex)
+    }
+    return numbers
 }
 
-console.log(giveMeRandom())
+console.log(giveMeRandom(5))
 
 
 //EXTRA:
