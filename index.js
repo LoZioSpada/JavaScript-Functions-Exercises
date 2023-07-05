@@ -39,13 +39,15 @@ console.log(reverseString("EPICODE"))
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
 function upperFirst (str){
-    let parole = str.split(' ')
-    let array = []
-    for(i = 0; i < parole.length; i++){
-        let primaMaiuscola = parole.toUpperCase()
+    let parole = str.split(" ")
+    let frase = ""
+    let parola = ""
 
+    for (i = 0; i < parole.length; i++){
+        parola = parole[i].split("")[0].toUpperCase() + parole[i].slice(1) + " "
+        frase = frase + parola
     }
-    
+    return frase
 }
 console.log(upperFirst('daje roma daje'))
 
